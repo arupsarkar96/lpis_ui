@@ -1,13 +1,29 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Roboto', sans-serif;
+  /* Change this to the font of your choice */
+  background-color: #f8f9fa;
+  /* Optional: a light background color */
+  color: #333;
+  /* Dark text color for readability */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  /* Makes headings bold */
+}
+
+p {
+  line-height: 1.6;
+  /* Increases line height for better readability */
 }
