@@ -14,7 +14,7 @@ const App = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link className="nav-link fs-5" to="/exact" style={{ transition: 'color 0.3s ease' }}>Exact Match</Link>
+                <Link className="nav-link fs-5" to="/best" style={{ transition: 'color 0.3s ease' }}>Best Match</Link>
               </li>
             </ul>
           </div>
@@ -25,7 +25,7 @@ const App = () => {
       <div className="container-fluid py-5">
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/exact" element={<Exact />} />
+          <Route path="/best" element={<Exact />} />
         </Routes>
       </div>
 
