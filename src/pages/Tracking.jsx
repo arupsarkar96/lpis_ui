@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Tracking = () => {
-    const [file, setFile] = useState(null);
     const [preview, setPreview] = useState(null);
     const [uploading, setUploading] = useState(false);
     const [results, setResults] = useState([]);
@@ -12,7 +11,6 @@ const Tracking = () => {
         const selectedFile = e.target.files[0];
         if (!selectedFile) return;
 
-        setFile(selectedFile);
         setPreview(URL.createObjectURL(selectedFile));
         setResults([]);
         setError(null);

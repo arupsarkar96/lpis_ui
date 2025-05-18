@@ -25,7 +25,7 @@ const Persons = () => {
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm mb-4">
                 <div className="container-fluid">
-                    <a className="navbar-brand fw-bold" href="#">
+                    <a className="navbar-brand fw-bold" href="/">
                         Manage Persons
                     </a>
                 </div>
