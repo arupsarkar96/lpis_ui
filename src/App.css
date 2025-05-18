@@ -2,3 +2,25 @@
   object-fit: cover;
   height: 200px;
 }
+
+/* Custom Styling for the navbar */
+.navbar {
+  background-color: #007bff !important;
+  /* Primary Blue */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+/* Customize Card Titles */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Person List Items */
+.person-list-item:hover {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
