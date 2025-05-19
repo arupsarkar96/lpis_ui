@@ -101,20 +101,33 @@ const Tracking = () => {
                                 {results.map((result, idx) => (
                                     <div className="col-md-6" key={idx}>
                                         <div className="card p-2 shadow-sm h-100">
-                                            <div className="d-flex justify-content-between align-items-center mb-2">
-                                                <h6 className="mb-0 fw-semibold text-truncate">
-                                                    {result.person?.name || 'Unknown'}
-                                                </h6>
-                                                <small className="text-muted">
-                                                    {new Date(result.timestamp).toLocaleTimeString()}
-                                                </small>
+
+                                            <div className="card-body d-flex gap-3">
+                                                <img
+                                                    src={`${process.env.REACT_APP_FILE_URL}/detected/${result.photo}`}
+                                                    alt="Detected"
+                                                    style={{ width: '100px', height: '100px', objectFit: 'cover' }}
+                                                    className="rounded border"
+                                                />
+
+                                                <div>
+                                                    <div className="d-flex justify-content-between align-items-center mb-2">
+                                                        <h6 className="mb-0 fw-semibold text-truncate">
+                                                            {result.person?.name || 'Unknown'}
+                                                        </h6>
+                                                        <small className="text-muted">
+                                                            {new Date(result.timestamp).toLocaleTimeString()}
+                                                        </small>
+                                                    </div>
+                                                    <p className="small text-muted mb-1">{result.person?.note}</p>
+                                                    <div className="d-flex flex-wrap gap-1 mb-2">
+                                                        <span className="badge bg-success">Score: {result.similarity}</span>
+                                                        <span className="badge bg-info text-dark">Index: {result.index_size}</span>
+                                                        <span className="badge bg-secondary">Time: {result.time_taken} ms</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <p className="small text-muted mb-1">{result.person?.note}</p>
-                                            <div className="d-flex flex-wrap gap-1 mb-2">
-                                                <span className="badge bg-success">Score: {result.similarity}</span>
-                                                <span className="badge bg-info text-dark">Index: {result.index_size}</span>
-                                                <span className="badge bg-secondary">Time: {result.time_taken} ms</span>
-                                            </div>
+
                                             <div className="d-flex flex-wrap gap-2 border-top pt-2">
                                                 {result.person?.faces?.map((face) => (
                                                     <img
